@@ -1,0 +1,20 @@
+---
+import ArticleLayout from "../layouts/ArticleLayout.astro"
+
+import { getArticles } from "../js/notion.js"
+
+const {article} = Astro.params
+
+const info = (await getArticles({ filterBy: article }))[0]
+
+
+if(!info) {
+    return Astro.redirect('/404')
+}
+---
+
+<ArticleLayout
+    title = {info.title}
+    img = {info.img}
+    text = {info.text}
+/>

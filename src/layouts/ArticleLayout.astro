@@ -1,0 +1,70 @@
+---
+import PrincipalLayout from "./PrincipalLayout.astro";
+import Contenido from "../components/Contenido.astro";
+const{img, title, text} = Astro.props;
+---
+
+<PrincipalLayout title={title} image={img}>
+    <section class="mt-20 w-full justify-center text-center m-auto px-8 sm:px-32 lg:px-40 xl:px-64 text-principal-black dark:text-principal-white">
+        <h1 class="font-generalsans-semibold text-5xl leading-[3.25rem] min-[1800px]:text-7xl mb-4">{title}</h1>
+        <section class="w-full justify-center flex">
+            <img alt="Alt" class="bg-principal-white w-full text-center justify-center object-cover rounded-lg mt-3 mb-2 h-[12rem] sm:h-[16rem] md:h-96 lg:h-[22rem] xl:h-[25rem] min-[1800px]:h-[32rem] min-[1800px]:w-1/2" src={frontmatter.img}/>
+        </section>
+    </section>
+    <section class="w-full justify-center flex mt-5">
+        <article class="prose font-generalsans dark:prose-invert prose-img:my-3 prose-img:rounded mb-4 text-normal  px-8 sm:px-0 sm:max-w-lg min-[1800px]:text-xl min-[1800px]:max-w-4xl">
+            {text}
+        </article>
+    </section>
+</PrincipalLayout>
+
+<style>
+    #matemáticas{
+        color:#004193;
+    }
+    #biología{
+        color:#005100;
+    }
+    #geología{
+        color:#6E3400;
+    }
+    #física{
+        color:#950000;
+    }
+    #química{
+        color:#820083;
+    }
+    #tecnología{
+        color:#623B00;
+    }
+    #programación{
+        color:#5a12b0;
+    }
+    #científicos{
+        color:#004f3e;
+    }
+    :is(.dark #matemáticas) {
+        color:#a8c6e3
+    }
+    :is(.dark #biología) {
+        color:#64db62
+    }
+    :is(.dark #geología) {
+        color:#e2bba5
+    }
+    :is(.dark #física) {
+        color:#ffaaa2
+    }
+    :is(.dark #química) {
+        color:#ff99ff
+    }
+    :is(.dark #tecnología) {
+        color:#f2ba48
+    }
+    :is(.dark #programación) {
+        color:#e9aaff
+    }
+    :is(.dark #científicos) {
+        color:#16dac0
+    }
+</style>

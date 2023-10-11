@@ -1,0 +1,9 @@
+---
+import Layout from "./Layout.astro";
+import SeccionArticulosGrandes from "../components/SeccionCopia.astro";
+const {title, articulos, inicial} = Astro.props;
+---
+
+<Layout title={title}>
+	<SeccionArticulosGrandes articulos={articulos}/>
+</Layout>

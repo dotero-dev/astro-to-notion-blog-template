@@ -22,10 +22,11 @@ export const getArticles = async ({ filterBy } = {}) => {
 
     return results.map(page => {
         const {properties} = page
-        const {slug, title} = properties
+        const {slug, title, img} = properties
 
         return {
             id: slug.rich_text[0].plain_text,
+            img: img.rich_text[0].plain_text,
             title: title.title[0].plain_text
         }
     })

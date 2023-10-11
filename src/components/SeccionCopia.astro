@@ -1,0 +1,8 @@
+---
+import Contenido from "./Contenido.astro";
+const {articulos} = Astro.props
+---
+<section class="md:flex px-12 sm:px-24 md:px-0 gap-x-7 w-full justify-center h-full mt-16 2xl:mt-24">
+    <Contenido contenido="article" url={articulos[0].id} titulo={articulos[0].title} imagen={articulos[0].img} design="xl"/>
+    <Contenido contenido="article" url={articulos[1].id} titulo={articulos[1].title} imagen={articulos[1].img} design="lg"/>
+</section>
