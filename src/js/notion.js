@@ -3,7 +3,7 @@ import { Client } from '@notionhq/client'
 const DATABASE_ID = "888b9190ca0b410a89838294b3e596fb"
 
 const notion = new Client({
-    auth: import.meta.env.NOTION_TOKEN
+    auth: "secret_mbOkpIyQTxwWgLWouhG8PQ1CgXCwvIkj9SJDHCTpCTM"
 })
 
 export const getArticles = async ({ filterBy } = {}) => {
